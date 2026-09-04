@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<!-- saved from url=(0184)file:///C:/Users/User/Downloads/115%E8%8A%B1%E8%93%AE%E6%85%A2%E5%A3%98%E8%B3%BD%E4%BA%8B%E8%A3%81%E5%88%A4%E8%88%87%E5%B7%A5%E4%BD%9C%E4%BA%BA%E5%93%A1%E6%8E%92%E7%8F%AD%E8%A1%A8.html -->
+<html lang="zh-TW"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>115花蓮慢壘賽事裁判與工作人員排班表</title>
+  <style>
+    :root {
+      --primary-color: #1F4E78;
+      --border-color: #CCCCCC;
+    }
+
+    body {
+      font-family: "Microsoft JhengHei", "PingFang TC", Arial, sans-serif;
+      margin: 20px;
+      color: #333;
+      background-color: #F3F4F6;
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: 0 auto;
+      background: #FFFFFF;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    /* 工具列按鈕 */
+    .toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      gap: 10px;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 8px;
+    }
+
+    button {
+      padding: 8px 16px;
+      font-size: 14px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.2s;
+    }
+
+    .btn-primary { background-color: var(--primary-color); color: white; }
+    .btn-primary:hover { background-color: #153552; }
+
+    .btn-success { background-color: #10B981; color: white; }
+    .btn-success:hover { background-color: #059669; }
+
+    .btn-danger { background-color: #EF4444; color: white; padding: 4px 8px; font-size: 12px; }
+    .btn-danger:hover { background-color: #DC2626; }
+
+    /* 表格樣式 */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      background-color: #FFFFFF;
+    }
+
+    th, td {
+      border: 1px solid var(--border-color);
+      padding: 8px;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 14px;
+      transition: background-color 0.2s;
+    }
+
+    th {
+      background-color: var(--primary-color);
+      color: white;
+      font-weight: bold;
+    }
+
+    /* 點擊編輯樣式 */
+    [contenteditable="true"] {
+      outline: none;
+      min-height: 20px;
+    }
+
+    [contenteditable="true"]:focus {
+      outline: 2px solid #0284C7;
+      border-radius: 2px;
+    }
+
+    tr.ceremony-row td {
+      background-color: #E9EEF4 !important;
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+
+    /* 列印專用 CSS 樣式 */
+    @media print {
+      body {
+        background-color: white;
+        margin: 0;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .container {
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+
+      .no-print {
+        display: none !important;
+      }
+
+      table {
+        width: 100%;
+        page-break-inside: auto;
+      }
+
+      tr {
+        page-break-inside: avoid;
+        page-break-after: auto;
+      }
+
+      th, td {
+        border: 1px solid #000;
+        padding: 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1 contenteditable="true">115花蓮慢壘賽事裁判與工作人員排班表</h1>
+
+  <div class="toolbar no-print">
+    <div class="btn-group">
+      <button class="btn-primary" onclick="addRow(&#39;match&#39;)">＋ 新增比賽場次</button>
+      <button class="btn-primary" onclick="addRow(&#39;ceremony&#39;)">＋ 新增典禮 / 備註行</button>
+    </div>
+    <button class="btn-success" onclick="window.print()">🖨️ 列印 / 轉存 PDF</button>
+  </div>
+
+  <table id="scheduleTable">
+    <thead>
+      <tr>
+        <th style="width: 15%;">日期</th>
+        <th style="width: 10%;">時間</th>
+        <th style="width: 13%;">主審</th>
+        <th style="width: 13%;">一壘審</th>
+        <th style="width: 13%;">三壘審</th>
+        <th style="width: 13%;">紀錄</th>
+        <th style="width: 13%;">備註</th>
+        <th class="no-print" style="width: 10%;">操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td contenteditable="true">115/7/25<br>星期六<br>(D場地)</td>
+        <td contenteditable="true">08:00</td>
+        <td contenteditable="true" style="font-weight: bold; background-color: rgb(255, 228, 225);">小明</td>
+        <td contenteditable="true" style="font-weight: bold; background-color: rgb(224, 255, 255);">小華</td>
+        <td contenteditable="true" style="font-weight: bold; background-color: rgb(255, 250, 205);">小張</td>
+        <td contenteditable="true" style="font-weight: bold; background-color: rgb(230, 230, 250);">小陳</td>
+        <td contenteditable="true">社會組</td>
+        <td class="no-print"><button class="btn-danger" onclick="deleteRow(this)">刪除</button></td>
+      </tr>
+      <tr>
+        <td contenteditable="true">115/7/25<br>星期六<br>(D場地)</td>
+        <td contenteditable="true">09:00</td>
+        <td contenteditable="true" style="font-weight: bold; background-color: rgb(230, 230, 250);">小陳</td>
+        <td contenteditable="true" style="font-weight: bold; background-color: rgb(255, 228, 225);">小明</td>
+        <td contenteditable="true" style="background-color: rgb(224, 255, 255); font-weight: bold;">小華</td>
+        <td contenteditable="true" style="background-color: rgb(255, 250, 205); font-weight: bold;">小張</td>
+        <td contenteditable="true">社會組</td>
+        <td class="no-print"><button class="btn-danger" onclick="deleteRow(this)">刪除</button></td>
+      </tr>
+      <tr>
+        <td contenteditable="true">115/7/25<br>星期六<br>(D場地)</td>
+        <td contenteditable="true">10:00</td>
+        <td contenteditable="true" style="font-weight: bold; background-color: rgb(224, 255, 255);"><span style="font-weight: 700; background-color: rgb(224, 255, 255);">小華</span></td>
+        <td contenteditable="true" style="font-weight: bold; background-color: rgb(230, 230, 250);">小陳</td>
+        <td contenteditable="true" style="background-color: rgb(255, 250, 205); font-weight: bold;">小張</td>
+        <td contenteditable="true" style="background-color: rgb(255, 228, 225); font-weight: bold;">小明</td>
+        <td contenteditable="true">社會組</td>
+        <td class="no-print"><button class="btn-danger" onclick="deleteRow(this)">刪除</button></td>
+      </tr>
+      <tr class="ceremony-row">
+        <td contenteditable="true">115/7/25<br>星期六<br>(D場地)</td>
+        <td contenteditable="true">14:00</td>
+        <td contenteditable="true" colspan="5">開幕典禮</td>
+        <td class="no-print"><button class="btn-danger" onclick="deleteRow(this)">刪除</button></td>
+      </tr>
+      <tr>
+        <td contenteditable="true">115/7/26<br>星期日<br>(D場地)</td>
+        <td contenteditable="true">15:00</td>
+        <td contenteditable="true" style="font-weight: bold; background-color: rgb(230, 230, 250);">小陳</td>
+        <td contenteditable="true" style="font-weight: bold; background-color: rgb(255, 250, 205);"><span style="font-weight: 700; background-color: rgb(255, 250, 205);">小張</span></td>
+        <td contenteditable="true" style="font-weight: bold; background-color: rgb(224, 255, 255);"><span style="background-color: rgb(224, 255, 255);">小華</span></td>
+        <td contenteditable="true" style="font-weight: bold; background-color: rgb(255, 228, 225);"><span style="font-weight: 700; background-color: rgb(255, 228, 225);">小明</span></td>
+        <td contenteditable="true">健康冠亞</td>
+        <td class="no-print"><button class="btn-danger" onclick="deleteRow(this)">刪除</button></td>
+      </tr>
+    <tr>
+        <td contenteditable="true">115/7/26<br>星期日<br>(D場地)</td>
+        <td contenteditable="true">00:00</td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td class="no-print"><button class="btn-danger" onclick="deleteRow(this)">刪除</button></td>
+      </tr><tr>
+        <td contenteditable="true">115/7/26<br>星期日<br>(D場地)</td>
+        <td contenteditable="true">00:00</td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td class="no-print"><button class="btn-danger" onclick="deleteRow(this)">刪除</button></td>
+      </tr><tr>
+        <td contenteditable="true">115/7/26<br>星期日<br>(D場地)</td>
+        <td contenteditable="true">00:00</td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td class="no-print"><button class="btn-danger" onclick="deleteRow(this)">刪除</button></td>
+      </tr></tbody>
+  </table>
+</div>
+
+<script>
+  // 高亮色彩庫
+  const colorPalette = [
+    "#FFE4E1", // 淺粉紅
+    "#E0FFFF", // 淺青色
+    "#FFFACD", // 淺檸檬黃
+    "#E6E6FA", // 淺薰衣草紫
+    "#D8BFD8", // 淺紫紅
+    "#D3FFCE", // 淺薄荷綠
+    "#FFDAB9", // 淺桃色
+    "#E2F0D9", // 淺橄欖綠
+    "#FCE4D6"  // 淺珊瑚橙
+  ];
+
+  // 自動比對姓名並標記重複顏色
+  function highlightDuplicateNames() {
+    const table = document.getElementById("scheduleTable");
+    const rows = table.querySelectorAll("tbody tr");
+    const nameCells = [];
+    const nameCounts = {};
+
+    // 1. 掃描所有非典禮行的姓名欄位 (主審、一壘審、三壘審、紀錄)
+    rows.forEach(row => {
+      if (row.classList.contains("ceremony-row")) return;
+
+      const cells = row.children;
+      // 索引 2~5 對應：主審、一壘審、三壘審、紀錄
+      for (let i = 2; i <= 5; i++) {
+        if (cells[i]) {
+          const name = cells[i].textContent.trim();
+          if (name) {
+            nameCells.push({ cell: cells[i], name: name });
+            nameCounts[name] = (nameCounts[name] || 0) + 1;
+          } else {
+            cells[i].style.backgroundColor = "";
+          }
+        }
+      }
+    });
+
+    // 2. 為重複出現的姓名分配專屬顏色
+    const nameColorMap = {};
+    let colorIdx = 0;
+
+    Object.keys(nameCounts).forEach(name => {
+      if (nameCounts[name] > 1) { // 出現 2 次（含）以上
+        nameColorMap[name] = colorPalette[colorIdx % colorPalette.length];
+        colorIdx++;
+      }
+    });
+
+    // 3. 套用或清除網底顏色
+    nameCells.forEach(item => {
+      if (nameColorMap[item.name]) {
+        item.cell.style.backgroundColor = nameColorMap[item.name];
+        item.cell.style.fontWeight = "bold";
+      } else {
+        item.cell.style.backgroundColor = "";
+        item.cell.style.fontWeight = "normal";
+      }
+    });
+  }
+
+  // 監聽表格輸入事件，即時更新重複色彩
+  document.getElementById("scheduleTable").addEventListener("input", highlightDuplicateNames);
+
+  // 新增欄位
+  function addRow(type) {
+    const tbody = document.querySelector("#scheduleTable tbody");
+    const tr = document.createElement("tr");
+
+    if (type === 'ceremony') {
+      tr.className = "ceremony-row";
+      tr.innerHTML = `
+        <td contenteditable="true">日期</td>
+        <td contenteditable="true">14:00</td>
+        <td contenteditable="true" colspan="5">典禮 / 活動名稱</td>
+        <td class="no-print"><button class="btn-danger" onclick="deleteRow(this)">刪除</button></td>
+      `;
+    } else {
+      tr.innerHTML = `
+        <td contenteditable="true">日期</td>
+        <td contenteditable="true">00:00</td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td class="no-print"><button class="btn-danger" onclick="deleteRow(this)">刪除</button></td>
+      `;
+    }
+    tbody.appendChild(tr);
+    highlightDuplicateNames();
+  }
+
+  // 刪除欄位
+  function deleteRow(btn) {
+    const row = btn.closest("tr");
+    row.remove();
+    highlightDuplicateNames();
+  }
+
+  // 初始化首次標記
+  window.onload = highlightDuplicateNames;
+</script>
+
+
+</body>
+<hr>
+<p>
+<p style="text-align: center;">製作人：葉志明老師 製作日期：2026/09/06 </p>
+
+</html>
